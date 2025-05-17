@@ -12,6 +12,3 @@ impl @moonchor.Location for Worker with name(self) {
 fn Worker::new(id : String) -> Worker {
   Worker::{ id, }
 }
-
-///|
-// priv struct WorkerState {}

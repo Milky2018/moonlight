@@ -26,15 +26,6 @@ pub fn MoonlightContext::immediate[T](
 }
 
 ///|
-pub fn MoonlightContext::array[T](
-  self : MoonlightContext,
-  data : Array[T]
-) -> LightArray[T] {
-  let data = self.chorctx.locally(self.config.manager, fn(_unwrapper) { data })
-  { ctx: self, data }
-}
-
-///|
 pub async fn MoonlightContext::remote_run[In : @moonchor.Message, Out : @moonchor.Message](
   self : MoonlightContext,
   task : (In) -> Out,
